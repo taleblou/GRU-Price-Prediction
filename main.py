@@ -8,6 +8,16 @@ import tensorflow as tf
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import yfinance as yf
 import os
+from tqdm import tqdm
+import warnings
+import tensorflow as tf
+print(tf.__version__)
+warnings.filterwarnings("ignore")
+print("GPUs:", tf.config.list_physical_devices('GPU'))
+# Check if GPU is available
+device = '/GPU:0' if tf.config.list_physical_devices('GPU') else '/CPU:0'
+print(f"Using device: {device}")
+
 name="BTC-USD"#"GC=F""EURUSD=X""^GSPC"
 file_path = f"GRU{name}.txt"
 def text_write(text):
@@ -38,7 +48,7 @@ def build_gru_model(Xtrain,Y_train,Xval,Y_val):
         Dense(units=1)
     ])
     model.compile(optimizer='adam', loss='mean_squared_error')
-    model.fit(Xtrain, Y_train, epochs=20, batch_size=32, validation_data=(Xval, Y_val))
+    model.fit(Xtrain, Y_train, epochs=20, batch_size=32, validation_data=(Xval, Y_val), verbose=0)
     return model
 # Load BTC and Gold data
 data = load_data(name)
@@ -82,7 +92,7 @@ data["p_Close"]= np.nan
 
 
 box=200
-for i in range(box-1):
+for i in tqdm(range(box-1)):
     len=X.shape[0]
     len=round(len/4)
     X_train=X[:i-box-len]
@@ -96,10 +106,11 @@ for i in range(box-1):
         Xtrain = np.expand_dims(X_train, axis=1)  # Add timestep dimension (samples, timesteps, features)
         Xval = np.expand_dims(X_val, axis=1)
         Xtest = np.expand_dims(X_test, axis=1)
+        # Train the model on the selected device (GPU or CPU)
+        with tf.device(device):
+            model=build_gru_model(Xtrain, Y_train,Xval, Y_val)
 
-        model=build_gru_model(Xtrain, Y_train,Xval, Y_val)
-
-        predictions = model.predict(Xtest)
+        predictions = model.predict(Xtest, verbose=0)
         predictions=np.tile(predictions, 4).reshape(1, 4)
         predictions = scaler.inverse_transform(predictions)
         data.loc[data.index[i - box + 1], 'p_'+c] = predictions[0][0]
@@ -110,7 +121,7 @@ for i in range(box-1):
 # Calculate Accuracy (for classification)
 df= data[['y_Open','p_Open','y_Close','p_Close','y_High','p_High','y_Low','p_Low']]
 df.dropna(inplace=True)
-
+df.to_csv(f"Predict_{name}.csv")
 
 # Plot separate line charts
 for c in ['Open','High','Low','Close']:
