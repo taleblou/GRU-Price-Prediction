@@ -4,13 +4,7 @@ This repository contains the initial implementation of a GRU (Gated Recurrent Un
 
 ## **Performance Metrics**
 
-### **^GSPC (S\&P 500 Index)**
-
-| Metric | Open | High | Low | Close |
-| ----- | ----- | ----- | ----- | ----- |
-| Mean Squared Error | 3254668.38 | 3273539.28 | 3281630.37 | 3223835.31 |
-| Mean Absolute Error | 1770.26 | 1775.71 | 1780.66 | 1765.94 |
-| R-squared | \-36.36 | \-36.57 | \-36.67 | \-36.00 |
+### 
 
 ### **BTC-USD (Bitcoin)**
 
@@ -20,6 +14,8 @@ This repository contains the initial implementation of a GRU (Gated Recurrent Un
 | Mean Absolute Error | 1881.28 | 1735.90 | 2690.76 | 1924.75 |
 | R-squared | 0.963 | 0.970 | 0.935 | 0.964 |
 
+### **![][image1]**
+
 ### **GC=F (Gold Futures)**
 
 | Metric | Open | High | Low | Close |
@@ -28,6 +24,8 @@ This repository contains the initial implementation of a GRU (Gated Recurrent Un
 | Mean Absolute Error | 40.00 | 34.56 | 43.68 | 38.78 |
 | R-squared | 0.914 | 0.940 | 0.905 | 0.921 |
 
+### **![][image2]**
+
 ### **EURUSD (Euro/US Dollar)**
 
 | Metric | Open | High | Low | Close |
@@ -35,6 +33,20 @@ This repository contains the initial implementation of a GRU (Gated Recurrent Un
 | Mean Squared Error | 0.00003853 | 0.00003504 | 0.08964795 | 0.00004077 |
 | Mean Absolute Error | 0.0050 | 0.0048 | 0.2992 | 0.0050 |
 | R-squared | 0.866 | 0.878 | \-310.36 | 0.858 |
+
+### 
+
+### **![][image3]**
+
+### **GSPC (S\&P 500 Index)**
+
+| Metric | Open | High | Low | Close |
+| ----- | ----- | ----- | ----- | ----- |
+| Mean Squared Error | 3254668.38 | 3273539.28 | 3281630.37 | 3223835.31 |
+| Mean Absolute Error | 1770.26 | 1775.71 | 1780.66 | 1765.94 |
+| R-squared | \-36.36 | \-36.57 | \-36.67 | \-36.00 |
+
+### **![][image4]**
 
 ## **Related Websites**
 
@@ -52,7 +64,7 @@ Discover free trading signals powered by expert technical analysis. Boost your f
 
 ## **About This Project**
 
-This GRU model is an initial implementation, released for public use. The project demonstrates the potential of deep learning models for financial predictions. While this repository focuses on GRU, I have also utilized other models, the code for which is available on my [GitHub](https://github.com/taleblou/).
+This GRU model is an initial implementation, released for public use. The project demonstrates the potential of deep learning models for financial predictions. While this repository focuses on GRU, I have also utilized other models, the code for which is available on my [GitHub](https://github.com/).
 
 ## **How to Use**
 
@@ -65,3 +77,7 @@ This GRU model is an initial implementation, released for public use. The projec
 
 This project is open-source and available for public use under the MIT License. Contributions and feedback are welcome\!
 
+[image1]: <https://raw.githubusercontent.com/taleblou/GRU-Price-Prediction/refs/heads/main/Plot/GRU_BTC-USD.png>
+[image2]: <https://raw.githubusercontent.com/taleblou/GRU-Price-Prediction/refs/heads/main/Plot/GRU_GC%3DF.png>
+[image3]: <https://raw.githubusercontent.com/taleblou/GRU-Price-Prediction/refs/heads/main/Plot/GRU_EURUSD%3DX.png>
+[image4]: <https://raw.githubusercontent.com/taleblou/GRU-Price-Prediction/refs/heads/main/Plot/GRU_%5EGSPC.png>
