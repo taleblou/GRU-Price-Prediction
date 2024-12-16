@@ -79,8 +79,8 @@ data["y_Low"]=data['Low']
 data["y_Low"]=data["y_Low"].shift()
 data.dropna(inplace=True)
 
-X=data[["Close","Open","High","Low"]].values
-Y=data[["y_Close","y_Open","y_High","y_Low"]].values
+X=data[["Close","Open","High","Low"]]
+Y=data[["y_Close","y_Open","y_High","y_Low"]]
 # Train-test split
 data["p_Low"]= np.nan
 data["p_High"]= np.nan
@@ -108,7 +108,7 @@ for i in tqdm(range(box-1)):
         Xtest = np.expand_dims(X_test, axis=1)
         # Train the model on the selected device (GPU or CPU)
         with tf.device(device):
-            model=build_gru_model(Xtrain, Y_train,Xval, Y_val)
+            model=build_gru_model(Xtrain, Y_train["y_"+c],Xval, Y_val["y_"+c])
 
         predictions = model.predict(Xtest, verbose=0)
         predictions=np.tile(predictions, 4).reshape(1, 4)
