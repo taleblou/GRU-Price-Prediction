@@ -9,20 +9,26 @@ This repository contains the initial implementation of a GRU (Gated Recurrent Un
 ### **BTC-USD (Bitcoin)**
 
 | Metric | Open | High | Low | Close |
-| :---- | :---- | :---- | :---- | :---- |
-| Mean Squared Error | 6205912.59 | 5125068.62 | 10970675.74 | 6047803.25 |
-| Mean Absolute Error | 1881.28 | 1735.90 | 2690.76 | 1924.75 |
-| R-squared | 0.963 | 0.970 | 0.935 | 0.964 |
+| ----- | ----- | ----- | ----- | ----- |
+| Mean Squared Error | 0.0006704011 | 0.0007466893 | 0.0010460546 | 0.0010510000 |
+| Mean Absolute Error | 0.0189357042 | 0.0207899107 | 0.0244501190 | 0.0251394672 |
+| R-squared | 0.9698693476 | 0.9671408209 | 0.9520648807 | 0.9536147883 |
+| Median Absolute Error | 0.0147797754 | 0.0157247866 | 0.0198321750 | 0.0206766406 |
+| Explained Variance Score | 0.9714662622 | 0.9682738453 | 0.9575608982 | 0.9563927096 |
+
 
 ### **![][image1]**
 
 ### **GC=F (Gold Futures)**
 
 | Metric | Open | High | Low | Close |
-| :---- | :---- | :---- | :---- | :---- |
-| Mean Squared Error | 2516.61 | 1765.44 | 2780.04 | 2313.51 |
-| Mean Absolute Error | 40.00 | 34.56 | 43.68 | 38.78 |
-| R-squared | 0.914 | 0.940 | 0.905 | 0.921 |
+| ----- | ----- | ----- | ----- | ----- |
+| Mean Squared Error | 0.0006704011 | 0.0007466893 | 0.0010460546 | 0.0010510000 |
+| Mean Absolute Error | 0.0189357042 | 0.0207899107 | 0.0244501190 | 0.0251394672 |
+| R-squared | 0.9698693476 | 0.9671408209 | 0.9520648807 | 0.9536147883 |
+| Median Absolute Error | 0.0147797754 | 0.0157247866 | 0.0198321750 | 0.0206766406 |
+| Explained Variance Score | 0.9714662622 | 0.9682738453 | 0.9575608982 | 0.9563927096 |
+
 
 ### **![][image2]**
 
@@ -30,9 +36,12 @@ This repository contains the initial implementation of a GRU (Gated Recurrent Un
 
 | Metric | Open | High | Low | Close |
 | :---- | :---- | :---- | :---- | :---- |
-| Mean Squared Error | 0.00003853 | 0.00003504 | 0.08964795 | 0.00004077 |
-| Mean Absolute Error | 0.0050 | 0.0048 | 0.2992 | 0.0050 |
-| R-squared | 0.866 | 0.878 | \-310.36 | 0.858 |
+| Mean Squared Error | 0.0003879169 | 0.0004876292 | 0.0005445911 | 0.0003651724 |
+| Mean Absolute Error | 0.0158024339 | 0.0179194147 | 0.0182679915 | 0.0155702525 |
+| R-squared | 0.9101155429 | 0.8892027422 | 0.8765603505 | 0.9154974316 |
+| Median Absolute Error | 0.0132580484 | 0.0159090454 | 0.0155098954 | 0.0136890470 |
+| Explained Variance Score | 0.9107513364 | 0.8902119109 | 0.8874938781 | 0.9170630250 |
+
 
 ### 
 
@@ -41,10 +50,13 @@ This repository contains the initial implementation of a GRU (Gated Recurrent Un
 ### **GSPC (S\&P 500 Index)**
 
 | Metric | Open | High | Low | Close |
-| ----- | ----- | ----- | ----- | ----- |
-| Mean Squared Error | 3254668.38 | 3273539.28 | 3281630.37 | 3223835.31 |
-| Mean Absolute Error | 1770.26 | 1775.71 | 1780.66 | 1765.94 |
-| R-squared | \-36.36 | \-36.57 | \-36.67 | \-36.00 |
+| :---- | :---- | :---- | :---- | :---- |
+| Mean Squared Error | 0.0006503769 | 0.0006529812 | 0.0006666432 | 0.0009187557 |
+| Mean Absolute Error | 0.0187974513 | 0.0194058691 | 0.0198970860 | 0.0233750671 |
+| R-squared | 0.9516866515 | 0.9538492619 | 0.9504676043 | 0.9351719127 |
+| Median Absolute Error | 0.0138990470 | 0.0166170954 | 0.0170245137 | 0.0193339874 |
+| Explained Variance Score | 0.9526338713 | 0.9568179300 | 0.9515982439 | 0.9413512079 |
+
 
 ### **![][image4]**
 
